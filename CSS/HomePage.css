@@ -69,10 +69,89 @@ html, body {
 
 /* RIGHT: Content Panel */
 .content-panel {
-  padding: 24px;
+max-width: 680px;
+  padding: 32px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeeef;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
   overflow-y: auto;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
+}
+
+/* Header Styling */
+.header-group {
+  margin-bottom: 24px;
+  border-bottom: 2px solid #f0f4f8;
+  padding-bottom: 16px;
+}
+
+.content-panel h1 {
+  margin: 0 0 6px 0;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.content-panel .subtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2563eb; /* Professional accent blue */
+}
+
+/* Achievements Section */
+.achievements-card {
+  background-color: #f8fafc;
+  border-left: 4px solid #2563eb;
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+}
+
+.achievements-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.achievements-list {
+  margin: 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.achievements-list li {
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.achievements-list li:last-child {
+  margin-bottom: 0;
+}
+
+.achievements-list strong {
+  color: #0f172a;
+}
+
+/* Body Copy */
+.bio-body p {
+  margin: 0 0 16px 0;
+  font-size: 0.98rem;
+  color: #475569;
+}
+
+.bio-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* MOBILE STACK */
