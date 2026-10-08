@@ -202,36 +202,37 @@ html, body {
 
 /* MOBILE STACK */
 
-/* Responsive Mobile Layout (screens smaller than 768px) */
-@media (max-width: 768px) {
-  /* Push main grid down more on mobile to account for navbar wrapping */
+/* Mobile Responsive Breakpoint */
+@media screen and (max-width: 900px) {
+  /* Increase top padding to account for fixed header on smaller screens */
   body {
-    padding-top: 80px;
+    padding-top: 75px;
   }
 
-  /* Stack panels vertically with Right Panel on TOP */
+  /* Reverses flex order: Right panel (profiles) on TOP, Left panel (iframe) below */
   .page {
+    display: flex;
     flex-direction: column-reverse;
     gap: 20px;
     padding: 12px;
   }
 
-  /* Make panels take full width */
-  .embed-panel,
-  .content-panel {
+  /* Full width for both panels on mobile */
+  .content-panel,
+  .embed-panel {
     max-width: 100%;
     width: 100%;
   }
 
-  /* Adjust iframe height for mobile screens */
-  .iframe-wrapper iframe {
-    height: 70vh;
+  /* Allows profiles to fit naturally on mobile */
+  .content-panel {
+    overflow-y: visible;
+    padding: 20px;
   }
 
-  /* Allow profile panel to scroll if content exceeds screen height on mobile */
-  .content-panel {
-    overflow-y: auto;
-    max-height: none;
-    padding: 20px;
+  /* Ensures the embedded map/page remains easy to scroll and view below profiles */
+  .iframe-wrapper iframe {
+    height: 600px;
+    border-radius: 8px;
   }
 }
