@@ -1,5 +1,4 @@
-
- /* Reset / Base */
+* Reset / Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,11 +7,11 @@
 
 html, body {
   width: 100%;
-  height: 100%;
-  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: #ffffff;
   color: #000;
-  overflow-x: hidden; /* prevent sideways scroll */
+  overflow-x: hidden;
+  padding-top: 80px; /* Offsets top nav */
 }
 
 /* Fixed Top Navigation Bar */
@@ -29,6 +28,7 @@ html, body {
   display: flex;
   align-items: center;
 }
+
 /* Inner Layout Alignment */
 .nav-container {
   max-width: 1400px;
@@ -42,7 +42,6 @@ html, body {
 
 /* Brand Link / Main Header */
 .Top-Nav .nav-brand {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: #0f172a;
@@ -54,15 +53,32 @@ html, body {
 }
 
 .Top-Nav .nav-brand:hover {
-  color: #2563eb; /* Matches primary accent blue */
+  color: #2563eb;
   background-color: #f8fafc;
 }
+
+/* Navigation Links */
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb;
+  background-color: #f1f5f9;
+}
+
 /* Contact Page Layout */
 .contact-page {
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #2c3e50;
 }
 
@@ -174,13 +190,7 @@ html, body {
   transform: scale(0.99);
 }
 
-/* Active Link in Nav */
-.nav-links a.active {
-  color: #2563eb;
-  background-color: #f1f5f9;
-}
-
-/* Mobile Responsiveness for Contact Page */
+/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   .agent-cards-container {
     flex-direction: column;
