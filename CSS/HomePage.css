@@ -50,7 +50,7 @@ html, body {
 
 /* LEFT PANEL: iFrame Container */
 .embed-panel {
-  padding-top: 2%;
+  padding-top: 3%;
   flex: 1;
   min-width: 0;
 }
@@ -67,7 +67,7 @@ html, body {
   flex: 1;
   max-width: 680px;
   padding: 32px;
-  padding-top: 2%;
+  padding-top: 3%;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
