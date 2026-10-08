@@ -39,39 +39,33 @@ html, body {
   background-color: #929292;
 }
 
-/* Main Page Grid */
+/* Container for the Grid */
 .page {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Left / Right */
-  height: 100vh;
-  margin-top: 10%; /* offset for navbar */
+  display: flex;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* LEFT: Embed Panel */
+/* LEFT PANEL: iFrame Container */
 .embed-panel {
-  border-right: 1px solid #ddd;
-  overflow: hidden;
-}
-
-.iframe-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  flex: 1;
+  min-width: 0;
 }
 
 .iframe-wrapper iframe {
-  width: 200%;           /* compensate for scale */
-  height: 200%;
-  transform: scale(0.5);
-  transform-origin: top left;
+  width: 100%;
+  height: 100vh;
   border: none;
+  border-radius: 12px;
 }
 
-/* RIGHT: Content Panel */
+/* RIGHT PANEL: Single Scrollable Container */
 .content-panel {
-max-width: 680px;
+  flex: 1;
+  max-width: 680px;
   padding: 32px;
-  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -79,19 +73,34 @@ max-width: 680px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #2c3e50;
   line-height: 1.6;
+  max-height: 90vh; /* Keeps it within screen height and scrolls internally */
   overflow-y: auto;
+}
+
+/* Individual Profile Cards */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clean Divider between Ari and Kristina */
+.profile-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 36px 0;
 }
 
 /* Header Styling */
 .header-group {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #f0f4f8;
-  padding-bottom: 16px;
+  padding-bottom: 12px;
 }
 
 .content-panel h1 {
-  margin: 0 0 6px 0;
-  font-size: 1.85rem;
+  margin: 0 0 4px 0;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #0f172a;
   letter-spacing: -0.02em;
@@ -99,9 +108,9 @@ max-width: 680px;
 
 .content-panel .subtitle {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #2563eb; /* Professional accent blue */
+  color: #2563eb; /* Accent blue */
 }
 
 /* Achievements Section */
@@ -110,7 +119,7 @@ max-width: 680px;
   border-left: 4px solid #2563eb;
   border-radius: 0 8px 8px 0;
   padding: 16px 20px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .achievements-label {
@@ -145,8 +154,8 @@ max-width: 680px;
 
 /* Body Copy */
 .bio-body p {
-  margin: 0 0 16px 0;
-  font-size: 0.98rem;
+  margin: 0 0 14px 0;
+  font-size: 0.96rem;
   color: #475569;
 }
 
