@@ -201,19 +201,37 @@ html, body {
 }
 
 /* MOBILE STACK */
+
+/* Responsive Mobile Layout (screens smaller than 768px) */
 @media (max-width: 768px) {
+  /* Push main grid down more on mobile to account for navbar wrapping */
+  body {
+    padding-top: 80px;
+  }
+
+  /* Stack panels vertically with Right Panel on TOP */
   .page {
-    grid-template-columns: 1fr;
-    grid-template-rows: 60vh auto; /* iframe on top */
-    height: auto;
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 12px;
   }
 
-  .embed-panel {
-    border-right: none;
-    border-bottom: 1px solid #ddd;
+  /* Make panels take full width */
+  .embed-panel,
+  .content-panel {
+    max-width: 100%;
+    width: 100%;
   }
 
-  .iframe-wrapper {
-    height: 60vh;
+  /* Adjust iframe height for mobile screens */
+  .iframe-wrapper iframe {
+    height: 70vh;
+  }
+
+  /* Allow profile panel to scroll if content exceeds screen height on mobile */
+  .content-panel {
+    overflow-y: auto;
+    max-height: none;
+    padding: 20px;
   }
 }
